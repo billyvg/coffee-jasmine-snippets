@@ -1,0 +1,109 @@
+# After Each
+snippet aft
+	afterEach () ->
+		${1}
+
+# Any
+snippet any
+	jasmine.any ${1}
+
+#	Before Each
+snippet bef
+	beforeEach () ->
+		${1}
+
+# Describe
+snippet des
+	describe '${1:description}', () ->
+		${2}
+
+# It
+snippet it
+	it '${1:description}', () ->
+		${2}
+
+# Runs
+snippet ru
+	runs(function() {
+		${1}
+	})${2}
+
+# Waits
+snippet wa
+	waits ${1} ${2}
+
+# Expect
+snippet ex
+	expect(${1:target})${2}
+
+# compres objects or primitives x, y and passes if they are equivalent
+snippet eq
+	expect(${1:target}).toEqual(${2:value})${3}
+snippet noeq
+	expect(${1:target}).not.toEqual(${2:value})${3}
+
+# compares objects or primitives x, y and passes if they are the same object
+snippet be
+	expect(${1:target}).toBe(${2:value})${3}
+snippet nobe
+	expect(${1:target}).not.toBe(${2:value})${3}
+
+# compares x to string or regex pattern
+snippet ema
+	expect(${1:target}).toMatch(${2:pattern})${3}
+snippet noema
+	expect(${1:target}).toMatch(${2:pattern})${3}
+
+# passes if x is not undefined
+snippet exde
+	expect(${1:target}).toBeDefined()${2}
+snippet exundef
+	expect(${1:target}).toBeUndefined()${2}
+
+# passes if x is null
+snippet enu
+	expect(${1:target}).toBeNull()${2}
+snippet noenu
+	expect(${1:target}).toBeNull()${2}
+
+# passes if x evaluates to true
+snippet et
+	expect(${1:target}).toBeTruthy()${2}
+# passes if x evaluates to false
+snippet ef
+	expect(${1:target}).toBeFalsy()${2}
+
+# passes if array or string x contains y
+snippet ec
+	expect(${1:target}).toContain(${2:value})${3}
+snippet noec
+	expect(${1:target}).toContain(${2:value})${3}
+
+# passes if x is less than y
+snippet elt
+	expect(${1:target}).toBeLessThan(${2:value})${3}
+# passes if x is greater than y
+snippet egt
+	expect(${1:target}).toBeGreaterThan(${2:value})${3}
+
+# Spy on
+snippet s
+	spyOn(${1:object}, '${2:method}')${3}
+
+# Spy on and call fake
+snippet scf
+	spyOn(${1:object}, '${2:method}').andCallFake(${3:function})${4}
+
+# Spy on and call through
+snippet sct
+	spyOn(${1:object}, '${2:method}').andCallThrough()${3}
+
+# Spy on and return
+snippet sr
+	spyOn(${1:object}, '${2:method}').andReturn(${3:arguments})${4}
+
+# Spy on and throw
+snippet st
+	spyOn(${1:object}, '${2:method}').andThrow(${3:exception})${4}
+
+
